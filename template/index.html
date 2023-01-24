@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Temperature</title>
+</head>
+<body>
+
+<h1>Welocome to "Employee Temperature Records" Project</h1>
+<p style="font-size: 20px;">Here You can add Employee detail, Temperature measuring device detail, and Employees Temperature to see 
+    their recorded temperature on different days.</p>
+
+    <h2> Following are the endpoints that you can use: </h2>
+    <h3> 1. Endpoints for Employee</h3>
+    <ul>
+        <li>employee_list/</li>
+        <li>employee_detail/<str:empname>/</li>
+        <li>createemployee/</li>
+        <li> deleteemployee/<str:empname>/</li>
+        <li> updateemployee/<str:empname>/</li>
+    </ul>
+    
+    <h3> 2. Endpoints for Device</h3>
+    <ul>
+        <li>createdevice/</li>
+        <li>device_list/<str:empname>/</li>
+        <li>device/<int:devicemodel>/ </li>
+        <li>updatedevice/<int:devicemodel>/ </li>
+        <li>deletedevice/<int:devicemodel>/</li>
+    </ul>
+
+    <h3> 3. Endpoints for Temperature</h3>
+    <ul>
+        <li>createtemp/</li>
+        <li>getalltemp/</li>
+        <li>singletemp/<str:empname>/</li>
+        <li>updatetemp/<int:pk>/</li>
+        <li>deletetemp/<int:pk>/</li>
+    </ul>
+
+    <h3> Other Endpoints</h3>
+    <ul>
+        <li>hightempemp/<str:mydate>/</li>
+        <li>allhightempemp/<str:mydate>/</li>
+        <li>hightempempdate/<str:empname>/<str:mydate>/</li>
+    </ul>
+</body>
+</html>
